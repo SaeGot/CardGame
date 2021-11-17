@@ -7,7 +7,7 @@ public class SingleLanePlayer : MonoBehaviour
 {
     SingleLaneElement singleLaneElement;
 
-    private void Awake()
+    void Awake()
     {
         singleLaneElement = new SingleLaneElement();
     }

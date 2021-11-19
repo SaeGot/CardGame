@@ -14,7 +14,7 @@ public class SingleLaneElement
         defaultCardList = new List<int>(new int[] { 0, 1, 2, 2, 3 });
     }
 
-    // Ä«µå ÇÚµå¿¡ ¼¼ÆÃ
+    // ì¹´ë“œ í•¸ë“œì— ì„¸íŒ…
     public void SetHand()
     {
         for (int n = 0; n < 5; n++)

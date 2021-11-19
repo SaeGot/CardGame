@@ -7,6 +7,7 @@ public class SingleLaneElement
     public string selectedCard;
     public Dictionary<int, int> handCard;
     private List<int> defaultCardList;
+	
     public SingleLaneElement()
     {
         selectedCard = "";

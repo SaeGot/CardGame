@@ -37,7 +37,7 @@ public class SingleLanePlayer : MonoBehaviour
         if (singleLaneElement.selectedCard != "")
         {
             string selected_card_name = singleLaneElement.selectedCard;
-            GameObject selected_object = GameObject.Find(selected_card_name).gameObject;
+            GameObject selected_object = GameObject.Find(selected_card_name);
             // 선택된 카드 이동
             selected_object.transform.position = new Vector3(0, 0, 0);
             Debug.Log(selected_card_name + " Moved to (0,0,0)");

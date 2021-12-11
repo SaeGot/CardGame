@@ -45,8 +45,8 @@ public class SingleLanePlayer : MonoBehaviour
             selected_object.transform.position = new Vector3(0, 0, 0);
             Debug.Log(selected_card_name + " Moved to (0,0,0)");
             // 선택된 카드의 타입 가져오기
-            GameObject text_object = selected_object.transform.Find("Text").gameObject;
-            int card_damage = int.Parse(text_object.GetComponent<Text>().text);
+            Card card_component = selected_object.GetComponent<Card>();
+            int card_damage = card_component.cardType;
             // 데미지
             singleLaneElement.life -= card_damage;
             GameObject.Find("Score").GetComponent<Text>().text = singleLaneElement.life.ToString();

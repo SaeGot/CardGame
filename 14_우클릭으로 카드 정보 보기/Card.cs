@@ -38,12 +38,9 @@ public class Card : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    // 카드 정보 보여주기
-    public void ShowInfo(GameObject card_Instance)
+    // 카드 정보 설정
+    public void SetInfo(GameObject card_Instance)
     {
-        instanceInfoText = Instantiate(infoText, card_Instance.transform);
-        Vector2 position = new Vector2(0, 100);
-        instanceInfoText.transform.localPosition = position;
         infoText.GetComponent<Text>().text = GetInfo();
     }
 

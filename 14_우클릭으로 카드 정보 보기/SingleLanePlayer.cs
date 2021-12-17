@@ -85,7 +85,7 @@ public class SingleLanePlayer : MonoBehaviour
             //버튼클릭 설정
             temp.GetComponent<Button>().onClick.AddListener(delegate { ClickCard(); });
             //카드 정보 설정
-            temp.GetComponent<Card>().SetInfo(temp);
+            temp.GetComponent<Card>().SetInfo();
 
             Debug.Log(card_name + " Created at x :" + position_x.ToString());
         }

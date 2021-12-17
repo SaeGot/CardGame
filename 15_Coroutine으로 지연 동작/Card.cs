@@ -35,7 +35,6 @@ public class Card : MonoBehaviour, IPointerClickHandler
         if (event_Data.button == PointerEventData.InputButton.Right && rightClickEnabled)
         {
             Debug.Log("Click");
-            instanceInfoText.GetComponent<Text>().text = GetInfo();
             instanceInfoText.SetActive(true);
         }
     }
@@ -49,7 +48,7 @@ public class Card : MonoBehaviour, IPointerClickHandler
 
 
     // 카드 정보 설정
-    public void SetInfo(GameObject card_Instance)
+    public void SetInfo()
     {
         infoText.GetComponent<Text>().text = GetInfo();
     }

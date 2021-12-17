@@ -33,13 +33,12 @@ public class Card : MonoBehaviour, IPointerClickHandler
         if (event_Data.button == PointerEventData.InputButton.Right)
         {
             Debug.Log("Click");
-            instanceInfoText.GetComponent<Text>().text = GetInfo();
             instanceInfoText.SetActive(true);
         }
     }
 
     // 카드 정보 설정
-    public void SetInfo(GameObject card_Instance)
+    public void SetInfo()
     {
         infoText.GetComponent<Text>().text = GetInfo();
     }

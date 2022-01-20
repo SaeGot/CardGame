@@ -39,7 +39,7 @@ public class Card : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    // Á¤º¸ ÅØ½ºÆ® È°¼º ¼³Á¤
+    // ì •ë³´ í…ìŠ¤íŠ¸ í™œì„± ì„¤ì •
     public void InfoTextSetActive(bool active, bool right_ClickEnabled)
     {
         instanceInfoText.SetActive(active);
@@ -47,25 +47,25 @@ public class Card : MonoBehaviour, IPointerClickHandler
     }
 
 
-    // Ä«µå Á¤º¸ ¼³Á¤
+    // ì¹´ë“œ ì •ë³´ ì„¤ì •
     public void SetInfo()
     {
-        infoText.GetComponent<Text>().text = GetInfo();
+        instanceInfoText.GetComponent<Text>().text = GetInfo();
     }
 
-    // Ä«µå Á¤º¸ °¡Á®¿À±â
+    // ì¹´ë“œ ì •ë³´ ê°€ì ¸ì˜¤ê¸°
     public string GetInfo()
     {
         switch (cardType)
         {
             case 0:
-                return "ÀûÀÇ °ø°İÀ» ¹æ¾îÇÕ´Ï´Ù.";
+                return "ì ì˜ ê³µê²©ì„ ë°©ì–´í•©ë‹ˆë‹¤.";
             case 1:
-                return "Àû¿¡°Ô 1ÀÇ ´ë¹ÌÁö¸¦ Áİ´Ï´Ù.";
+                return "ì ì—ê²Œ 1ì˜ ëŒ€ë¯¸ì§€ë¥¼ ì¤ë‹ˆë‹¤.";
             case 2:
-                return "Àû¿¡°Ô 2ÀÇ ´ë¹ÌÁö¸¦ Áİ´Ï´Ù.";
+                return "ì ì—ê²Œ 2ì˜ ëŒ€ë¯¸ì§€ë¥¼ ì¤ë‹ˆë‹¤.";
             case 3:
-                return "Àû¿¡°Ô 3ÀÇ ´ë¹ÌÁö¸¦ Áİ´Ï´Ù.";
+                return "ì ì—ê²Œ 3ì˜ ëŒ€ë¯¸ì§€ë¥¼ ì¤ë‹ˆë‹¤.";
         }
 
         return "";

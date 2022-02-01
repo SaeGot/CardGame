@@ -9,11 +9,10 @@ public class SingleLaneElement
     public int life;
     public List<int> startingCardList;
 
-    public SingleLaneElement(int _life)
+    public SingleLaneElement()
     {
         selectedCard = "";
         handCard = new Dictionary<int, int>();
-        life = _life;
         startingCardList = new List<int>(new int[] { 0, 1, 2, 2, 3 });
     }
 

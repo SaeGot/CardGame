@@ -15,7 +15,7 @@ public class SingleLanePlayer : MonoBehaviour
 
     void Awake()
     {
-        singleLaneElement = new SingleLaneElement(maxLife);
+        singleLaneElement = new SingleLaneElement();
     }
 
     // Start is called before the first frame update
@@ -59,7 +59,7 @@ public class SingleLanePlayer : MonoBehaviour
     public int GetDamage(SingleLanePlayer opponent)
     {
         string selected_card_name = singleLaneElement.selectedCard;
-        GameObject selected_object = GameObject.Find(selected_card_name);
+        GameObject selected_object = transform.Find(selected_card_name).gameObject;
         // 선택된 카드의 타입 가져오기
         int card_damage = GetCardType(selected_object);
 
@@ -170,7 +170,8 @@ public class SingleLanePlayer : MonoBehaviour
     // 체력 설정
     public void SetLife(int life)
     {
-        GameObject.Find("Score").GetComponent<Text>().text = life.ToString();
+        singleLaneElement.life = life;
+        transform.Find("Score").GetComponent<Text>().text = life.ToString();
     }
 
     // 체력 가져오기

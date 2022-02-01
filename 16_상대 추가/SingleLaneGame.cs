@@ -48,10 +48,10 @@ public class SingleLaneGame : MonoBehaviour
         you.Ready();
         yield return new WaitForSeconds(1f);
 
-        int me_damage = me.GetDamage(you);
-        int you_damage = you.GetDamage(me);
-        me.Fight(you_damage);
-        you.Fight(me_damage);
+        int you_damage = me.GetDamage(you);
+        int me_damage = you.GetDamage(me);
+        me.Fight(me_damage);
+        you.Fight(you_damage);
         yield return new WaitForSeconds(0.5f);
 
         CheckGameOver();

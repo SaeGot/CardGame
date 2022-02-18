@@ -73,6 +73,14 @@ public class SingleLanePlayer : MonoBehaviour
         {
             card_damage = 0;
         }
+        else if (card_damage == 0)
+        {
+            card_damage = opponent_card_type;
+        }
+        else if (card_damage <= opponent_card_type)
+        {
+            card_damage = 0;
+        }
 
         return card_damage;
     }

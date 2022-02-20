@@ -156,7 +156,7 @@ public class SingleLanePlayer : MonoBehaviour
         foreach (var item in singleLaneElement.handCard)
         {
             card_name = "Card_" + item.Key;
-            GameObject game_object = GameObject.Find(card_name).gameObject;
+            GameObject game_object = transform.Find(card_name).gameObject;
             object_name = game_object.name;
             // 카드 오브젝트 제거
             try

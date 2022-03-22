@@ -12,7 +12,6 @@ public class SingleLanePlayer : MonoBehaviour
     public int maxLife;
     private SingleLaneElement singleLaneElement;
     private bool opponent;
-    private Canvas canvas;
 
     void Awake()
     {
@@ -32,10 +31,9 @@ public class SingleLanePlayer : MonoBehaviour
     }
 
     // 게임 시작 전 초기화
-    public void Initialize(bool _opponent, Canvas _canvas)
+    public void Initialize(bool _opponent)
     {
         opponent = _opponent;
-        canvas = _canvas;
         SetHand();
         SetLife(maxLife);
     }
@@ -222,8 +220,8 @@ public class SingleLanePlayer : MonoBehaviour
     // 카드 선택 애니메이션 해제
     public IEnumerator StopSelectedAnimation()
     {
-        string opponent_selected_card_name = singleLaneElement.selectedCard;
-        GameObject selected_object = transform.Find(opponent_selected_card_name).gameObject;
+        string selected_card_name = singleLaneElement.selectedCard;
+        GameObject selected_object = transform.Find(selected_card_name).gameObject;
         selected_object.GetComponent<Card>().AnimationSet(false);
 
         yield return new WaitForSeconds(0.2f);

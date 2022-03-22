@@ -12,7 +12,6 @@ public class SingleLanePlayer : MonoBehaviour
     public int maxLife;
     private SingleLaneElement singleLaneElement;
     private bool opponent;
-    private Canvas canvas;
 
     void Awake()
     {
@@ -32,10 +31,9 @@ public class SingleLanePlayer : MonoBehaviour
     }
 
     // 게임 시작 전 초기화
-    public void Initialize(bool _opponent, Canvas _canvas)
+    public void Initialize(bool _opponent)
     {
         opponent = _opponent;
-        canvas = _canvas;
         SetHand();
         SetLife(maxLife);
     }

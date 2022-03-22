@@ -7,15 +7,14 @@ public class SingleLaneGame : MonoBehaviour
 {
     public SingleLanePlayer me;
     public SingleLanePlayer you;
-    public Canvas canvas;
     bool gameOver;
 
     // Start is called before the first frame update
     void Start()
     {
         gameOver = false;
-        me.Initialize(false, canvas);
-        you.Initialize(true, canvas);
+        me.Initialize(false);
+        you.Initialize(true);
     }
 
     // Update is called once per frame

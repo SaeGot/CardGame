@@ -145,11 +145,10 @@ public class SingleLaneGame : MonoBehaviour
         int me_damage = you.GetDamage(me);
         StartCoroutine(me.Fight(me_damage));
         yield return StartCoroutine(you.Fight(you_damage));
-        YouSetButton(false, false);
-        MeSetButton(false, false);
         yield return new WaitForSeconds(0.5f);
 
         CheckGameOver();
+        MeSetButton(true, true);
         // 핫시트 플레이시 첫 번째 플레이어 턴으로
         if (GameManager.instance.gameMode == 1)
             hotSeatSecondPlayerTurn = false;
